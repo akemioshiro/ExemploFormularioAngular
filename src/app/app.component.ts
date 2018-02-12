@@ -11,13 +11,16 @@ import { Person } from "./model";
 })
 export class AppComponent {
   user: Person;
+  submitted:boolean;
 
   constructor(_mock:Mock) {
     this.user = _mock.mike;
+    this.submitted = false;
   }
 
   onSubmit(f)
   {
+    this.submitted = true;
     console.log("sending..." + JSON.stringify(this.user));
   }
 
