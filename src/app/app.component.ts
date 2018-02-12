@@ -15,4 +15,10 @@ export class AppComponent {
   constructor(_mock:Mock) {
     this.user = _mock.mike;
   }
+
+  onSubmit(f)
+  {
+    console.log("sending..." + JSON.stringify(this.user));
+  }
+
 }

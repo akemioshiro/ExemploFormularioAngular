@@ -1,6 +1,6 @@
 {{user | json}}
 <br>
-<form #f="ngForm">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
   <input type="hidden" id="id" name="id" [(ngModel)]="user.id" />
   <div class="form-group">
     <label for="name">Name</label>
